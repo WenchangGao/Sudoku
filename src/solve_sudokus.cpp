@@ -1,5 +1,7 @@
 #include <iostream>
 #include <fstream>
+#include <stdio.h>
+#include "../include/Game.h"
 
 using namespace std;
 
@@ -13,8 +15,13 @@ extern bool unique; // whether the solutions of generated games required to be u
 int n;
 
 bool solve_sudokus() {
-    fstream fin(path);
-    fin >> n;
+    freopen(path.c_str(), "r", stdin);
+    cin >> n;
     if(n < 0) return false;
+    for(int i = 0;i < n;i++) {
+        Game g;
+        if(!g.solve()) return false;
+    }
+    cout << "solved successfully" << endl;
     return true;
 }

@@ -11,5 +11,6 @@ CMakeFiles/Sudoku.dir/src/main.cpp.obj: ../src/main.cpp
 CMakeFiles/Sudoku.dir/src/set_args.cpp.obj: ../include/arguments.h
 CMakeFiles/Sudoku.dir/src/set_args.cpp.obj: ../src/set_args.cpp
 
+CMakeFiles/Sudoku.dir/src/solve_sudokus.cpp.obj: ../include/Game.h
 CMakeFiles/Sudoku.dir/src/solve_sudokus.cpp.obj: ../src/solve_sudokus.cpp
 

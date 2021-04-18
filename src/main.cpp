@@ -1,3 +1,7 @@
+//
+// Created by WenchangGao
+//
+
 #include <iostream>
 
 using namespace std;
@@ -34,5 +38,5 @@ int main(int argc, char** argv) {
         return -1;
     }
 
-    cout << unique << endl;
+    return 0;
 }

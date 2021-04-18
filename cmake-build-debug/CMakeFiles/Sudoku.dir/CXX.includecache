@@ -6,21 +6,13 @@
 
 #IncludeRegexTransform: 
 
-D:/NKU/SoftwareEngineering/Sudoku/include/arguments.h
-string
--
+D:/NKU/SoftwareEngineering/Sudoku/include/Game.h
 
-D:/NKU/SoftwareEngineering/Sudoku/src/main.cpp
+D:/NKU/SoftwareEngineering/Sudoku/src/Game.cpp
+../include/Game.h
+D:/NKU/SoftwareEngineering/Sudoku/include/Game.h
 iostream
 -
-
-D:/NKU/SoftwareEngineering/Sudoku/src/set_args.cpp
-iostream
+cstring
 -
-sstream
--
-fstream
--
-../include/arguments.h
-D:/NKU/SoftwareEngineering/Sudoku/include/arguments.h
 
