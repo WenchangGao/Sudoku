@@ -50,6 +50,7 @@ bool set_arguments(int argc, char** argv) {
                      << "this argument is supposed to be between 1 and 10000000!" << endl;
                 return false;
             }
+            continue;
         }
 
         if(arguments[i] == "-s") {
@@ -65,6 +66,7 @@ bool set_arguments(int argc, char** argv) {
                 return false;
             }
             fs.close();
+            continue;
         }
 
         if(arguments[i] == "-n") {
@@ -86,6 +88,7 @@ bool set_arguments(int argc, char** argv) {
                      << "this argument is supposed to be between 1 and 10000!" << endl;
                 return false;
             }
+            continue;
         }
 
         if(arguments[i] == "-m") {
@@ -107,6 +110,7 @@ bool set_arguments(int argc, char** argv) {
                      << "this argument is supposed to be 1, 2 or 3!" << endl;
                 return false;
             }
+            continue;
         }
 
         if(arguments[i] == "-r") {
@@ -128,14 +132,18 @@ bool set_arguments(int argc, char** argv) {
                      << "this argument is supposed to be between 20 and 55!" << endl;
                 return false;
             }
+            continue;
         }
 
         if(arguments[i] == "-u") {
             if(is_set[5]) return false;
             is_set[5] = true;
-
-
+            unique = true;
+            continue;
         }
+
+        cout << "unresolved argument " << arguments[i] << endl;
+        return false;
     }
     return true;
 }
