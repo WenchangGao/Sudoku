@@ -1,0 +1,16 @@
+Sudoku.exe -c 100
+Sudoku.exe -c -20
+Sudoku.exe -s ../tests/test.txt
+Sudoku.exe -s ../tests/tes.txt
+Sudoku.exe -n 20
+Sudoku.exe -n -200
+Sudoku.exe -n 10005
+Sudoku.exe -m 2
+Sudoku.exe -m -1
+Sudoku.exe -m 5
+Sudoku.exe -r 25
+Sudoku.exe -r 90
+Sudoku.exe -r -1
+Sudoku.exe -u
+Sudoku.exe -u -n 533
+Sudoku.exe -r 25 -s ../tests/test.txt -n 240 -c 10

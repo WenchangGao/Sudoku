@@ -124,6 +124,7 @@ void Game::print() {
 void Game::generate_unique() {
     bool flag = true;
     while(flag) {
+        memset(sudoku, 0, sizeof(sudoku));
         generate();
         char ans1[100];
         dfs(0);
@@ -133,12 +134,8 @@ void Game::generate_unique() {
         }
         dfs2(blanks - 1);
         flag = false;
-        for(int i = 0;i < blanks;i++) {
-            if(ans1[i] != sudoku[blank[i] / 9][blank[i] % 9]) {
-                flag = true;
-                break;
-            }
-        }
+        for(int i = 0;i < blanks;i++)
+            if(ans1[i] != sudoku[blank[i] / 9][blank[i] % 9]) break;
     }
 }
 
