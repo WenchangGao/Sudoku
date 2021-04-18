@@ -1,5 +1,5 @@
-#include "../include/arguments.h"
 #include <iostream>
+#include "../include/arguments.h"
 
 using namespace std;
 

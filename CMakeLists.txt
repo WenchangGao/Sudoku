@@ -3,4 +3,8 @@ project(Sudoku)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Sudoku src/main.cpp src/Game.cpp src/set_args.cpp)
+add_executable(Sudoku src/main.cpp
+                      src/Game.cpp
+                      src/set_args.cpp
+                      src/solve_sudokus.cpp
+                      src/generate_sudokus.cpp)

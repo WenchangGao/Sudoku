@@ -169,6 +169,33 @@ src/Game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Sudoku.dir\build.make CMakeFiles/Sudoku.dir/src/Game.cpp.s
 .PHONY : src/Game.cpp.s
 
+src/generate_sudokus.obj: src/generate_sudokus.cpp.obj
+
+.PHONY : src/generate_sudokus.obj
+
+# target to build an object file
+src/generate_sudokus.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Sudoku.dir\build.make CMakeFiles/Sudoku.dir/src/generate_sudokus.cpp.obj
+.PHONY : src/generate_sudokus.cpp.obj
+
+src/generate_sudokus.i: src/generate_sudokus.cpp.i
+
+.PHONY : src/generate_sudokus.i
+
+# target to preprocess a source file
+src/generate_sudokus.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Sudoku.dir\build.make CMakeFiles/Sudoku.dir/src/generate_sudokus.cpp.i
+.PHONY : src/generate_sudokus.cpp.i
+
+src/generate_sudokus.s: src/generate_sudokus.cpp.s
+
+.PHONY : src/generate_sudokus.s
+
+# target to generate assembly for a file
+src/generate_sudokus.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Sudoku.dir\build.make CMakeFiles/Sudoku.dir/src/generate_sudokus.cpp.s
+.PHONY : src/generate_sudokus.cpp.s
+
 src/main.obj: src/main.cpp.obj
 
 .PHONY : src/main.obj
@@ -223,6 +250,33 @@ src/set_args.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Sudoku.dir\build.make CMakeFiles/Sudoku.dir/src/set_args.cpp.s
 .PHONY : src/set_args.cpp.s
 
+src/solve_sudokus.obj: src/solve_sudokus.cpp.obj
+
+.PHONY : src/solve_sudokus.obj
+
+# target to build an object file
+src/solve_sudokus.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Sudoku.dir\build.make CMakeFiles/Sudoku.dir/src/solve_sudokus.cpp.obj
+.PHONY : src/solve_sudokus.cpp.obj
+
+src/solve_sudokus.i: src/solve_sudokus.cpp.i
+
+.PHONY : src/solve_sudokus.i
+
+# target to preprocess a source file
+src/solve_sudokus.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Sudoku.dir\build.make CMakeFiles/Sudoku.dir/src/solve_sudokus.cpp.i
+.PHONY : src/solve_sudokus.cpp.i
+
+src/solve_sudokus.s: src/solve_sudokus.cpp.s
+
+.PHONY : src/solve_sudokus.s
+
+# target to generate assembly for a file
+src/solve_sudokus.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Sudoku.dir\build.make CMakeFiles/Sudoku.dir/src/solve_sudokus.cpp.s
+.PHONY : src/solve_sudokus.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -235,12 +289,18 @@ help:
 	@echo ... src/Game.obj
 	@echo ... src/Game.i
 	@echo ... src/Game.s
+	@echo ... src/generate_sudokus.obj
+	@echo ... src/generate_sudokus.i
+	@echo ... src/generate_sudokus.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
 	@echo ... src/set_args.obj
 	@echo ... src/set_args.i
 	@echo ... src/set_args.s
+	@echo ... src/solve_sudokus.obj
+	@echo ... src/solve_sudokus.i
+	@echo ... src/solve_sudokus.s
 .PHONY : help
 
 

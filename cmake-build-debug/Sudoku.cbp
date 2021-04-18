@@ -83,10 +83,16 @@
 		<Unit filename="D:/NKU/SoftwareEngineering/Sudoku/src/Game.cpp">
 			<Option target="Sudoku"/>
 		</Unit>
+		<Unit filename="D:/NKU/SoftwareEngineering/Sudoku/src/generate_sudokus.cpp">
+			<Option target="Sudoku"/>
+		</Unit>
 		<Unit filename="D:/NKU/SoftwareEngineering/Sudoku/src/main.cpp">
 			<Option target="Sudoku"/>
 		</Unit>
 		<Unit filename="D:/NKU/SoftwareEngineering/Sudoku/src/set_args.cpp">
+			<Option target="Sudoku"/>
+		</Unit>
+		<Unit filename="D:/NKU/SoftwareEngineering/Sudoku/src/solve_sudokus.cpp">
 			<Option target="Sudoku"/>
 		</Unit>
 		<Unit filename="D:/NKU/SoftwareEngineering/Sudoku/CMakeLists.txt">

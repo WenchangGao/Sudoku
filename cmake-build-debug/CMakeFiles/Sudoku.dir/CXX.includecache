@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/NKU/SoftwareEngineering/Sudoku/include/arguments.h
+string
+-
+
+D:/NKU/SoftwareEngineering/Sudoku/src/generate_sudokus.cpp
+string
+-
+iostream
+-
+fstream
+-
+
+D:/NKU/SoftwareEngineering/Sudoku/src/main.cpp
+iostream
+-
+
+D:/NKU/SoftwareEngineering/Sudoku/src/set_args.cpp
+iostream
+-
+../include/arguments.h
+D:/NKU/SoftwareEngineering/Sudoku/include/arguments.h
+
+D:/NKU/SoftwareEngineering/Sudoku/src/solve_sudokus.cpp
+iostream
+-
+fstream
+-
+
