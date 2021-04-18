@@ -91,8 +91,22 @@ bool set_arguments(int argc, char** argv) {
         if(arguments[i] == "-m") {
             if(is_set[3]) return false;
             is_set[3] = true;
-
-
+            i += 1;
+            // not digit
+            if(!is_digit(arguments[i])) {
+                cout << "error at -m " << arguments[i] << endl
+                     << "this argument is supposed to be an integer!" << endl;
+                return false;
+            }
+            stringstream ss;
+            ss << arguments[i];
+            ss >> level;
+            // out of range
+            if(level < 0 || level > 3) {
+                cout << "error at -m " << arguments[i] << endl
+                     << "this argument is supposed to be 1, 2 or 3!" << endl;
+                return false;
+            }
         }
 
         if(arguments[i] == "-r") {

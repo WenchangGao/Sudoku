@@ -34,6 +34,5 @@ int main(int argc, char** argv) {
         return -1;
     }
 
-    cout << number << endl;
-    return 0;
+    cout << level << endl;
 }
