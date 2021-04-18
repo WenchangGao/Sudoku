@@ -1,6 +1,7 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+#include "../include/Game.h"
 
 using namespace std;
 
@@ -14,5 +15,12 @@ extern bool unique; // whether the solutions of generated games required to be u
 using namespace std;
 
 bool generate_sudokus() {
+    Game g;
+    for(int i = 1;i <= number;i++) {
+        if (unique) g.generate_unique();
+        else g.generate();
+        g.print();
+        cout << endl << endl;
+    }
     return true;
 }

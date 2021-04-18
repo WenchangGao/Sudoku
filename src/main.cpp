@@ -33,6 +33,7 @@ int main(int argc, char** argv) {
     }
 
     // generate puzzles, report errors if failed
+    cout << "generating:" << endl;
     if(!generate_sudokus()) {
         cout << "failed to generate sudokus!" << endl;
         return -1;

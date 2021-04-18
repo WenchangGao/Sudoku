@@ -11,6 +11,12 @@ public:
     bool solve();
     bool check();
     bool dfs(int x);
+    void print();
+    bool read();
+    bool find_blanks();
+    void reset(int x, int y);
+    bool fillFrom(int y, int val);
+    bool available(int x, int y, char ans);
     void generate();
     void generate_unique();
 };

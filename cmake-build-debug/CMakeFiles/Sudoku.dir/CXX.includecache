@@ -10,13 +10,15 @@ D:/NKU/SoftwareEngineering/Sudoku/include/Game.h
 vector
 -
 
-D:/NKU/SoftwareEngineering/Sudoku/src/solve_sudokus.cpp
-iostream
--
-fstream
--
-stdio.h
--
+D:/NKU/SoftwareEngineering/Sudoku/src/Game.cpp
 ../include/Game.h
 D:/NKU/SoftwareEngineering/Sudoku/include/Game.h
+iostream
+-
+cstdlib
+-
+cstring
+-
+ctime
+-
 

@@ -5,6 +5,7 @@
 
 int count = 1; // number of solved games, 1 <= count <= 10000000
 std::string path = "../tests/test.txt"; // path
+std::string path2 = "../tests/test1.txt";
 int number = 1; // number of games to be generated, 1 <= number <= 10000
 int level = 1; // difficulty level, 1 2 3
 int blanks = 20; // number of blanks in the game to be filled, 20 <= blanks <= 55

@@ -4,6 +4,7 @@
 CMakeFiles/Sudoku.dir/src/Game.cpp.obj: ../include/Game.h
 CMakeFiles/Sudoku.dir/src/Game.cpp.obj: ../src/Game.cpp
 
+CMakeFiles/Sudoku.dir/src/generate_sudokus.cpp.obj: ../include/Game.h
 CMakeFiles/Sudoku.dir/src/generate_sudokus.cpp.obj: ../src/generate_sudokus.cpp
 
 CMakeFiles/Sudoku.dir/src/main.cpp.obj: ../src/main.cpp
