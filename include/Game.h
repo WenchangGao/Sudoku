@@ -15,6 +15,7 @@ public:
     bool read();
     bool find_blanks();
     void reset(int x, int y);
+    bool dfs2(int x);
     bool fillFrom(int y, int val);
     bool available(int x, int y, char ans);
     void generate();

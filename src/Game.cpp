@@ -23,6 +23,7 @@ bool Game::read() {
             cin >> sudoku[i][j];
             if(sudoku[i][j] == '$') {
                 blank.push_back(i * 9 + j);
+                sudoku[i][j] = 0;
                 continue;
             }
             if(sudoku[i][j] >= '0' && sudoku[i][j] <= '9') continue;
@@ -35,6 +36,7 @@ bool Game::find_blanks() {
         for(int j = 0;j < 9;j++){
             if(sudoku[i][j] == '$') {
                 blank.push_back(i * 9 + j);
+                sudoku[i][j] = 0;
                 continue;
             }
             if(sudoku[i][j] >= '0' && sudoku[i][j] <= '9') continue;
@@ -81,9 +83,23 @@ bool Game::check() {
 bool Game::dfs(int x) {
     if(x >= this->blank.size()) return false;
     for(int i = 1;i < 10;i++) {
-        this->sudoku[blank[x] / 9][blank[x] % 9] = i + '0';
-        if(x != this->blank.size() - 1) {if(dfs(x + 1)) return true;}
-        else { if (this->check()) return true; }
+        if(available(blank[x] / 9, blank[x] % 9, i + '0')) {
+            if (x != this->blank.size() - 1) { if (dfs(x + 1)) return true; }
+            else { if (this->check()) return true; }
+            sudoku[blank[x] / 9][blank[x] % 9] = 0;
+        }
+    }
+    return false;
+}
+
+bool Game::dfs2(int x) {
+    if(x < 0) return false;
+    for(int i = 1;i < 10;i++) {
+        if(available(blank[x] / 9, blank[x] % 9, i + '0')) {
+            if (x > 0) {if(dfs2(x - 1)) return true; }
+            else {if(this->check()) return true; }
+            sudoku[blank[x] / 9][blank[x] % 9] = 0;
+        }
     }
     return false;
 }
@@ -91,6 +107,7 @@ bool Game::dfs(int x) {
 bool Game::solve() {
     this->read();
     if(this->dfs(0)) print();
+//    if(this->dfs2(blanks - 1)) print();
     else cout << "no answer!" << endl;
 
     return true;
@@ -105,7 +122,24 @@ void Game::print() {
 }
 
 void Game::generate_unique() {
-
+    bool flag = true;
+    while(flag) {
+        generate();
+        char ans1[100];
+        dfs(0);
+        for(int i = 0;i < blanks;i++) {
+            ans1[i] = sudoku[blank[i] / 9][blank[i] % 9];
+            sudoku[blank[i] / 9][blank[i] % 9] = 0;
+        }
+        dfs2(blanks - 1);
+        flag = false;
+        for(int i = 0;i < blanks;i++) {
+            if(ans1[i] != sudoku[blank[i] / 9][blank[i] % 9]) {
+                flag = true;
+                break;
+            }
+        }
+    }
 }
 
 bool Game::available(int x, int y, char ans) {
