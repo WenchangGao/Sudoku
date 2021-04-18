@@ -83,7 +83,7 @@ bool set_arguments(int argc, char** argv) {
             // out of range
             if(number < 0 || number > 10000) {
                 cout << "error at -n " << arguments[i] << endl
-                     << "this argument is supposed to be between 1 and 10000000!" << endl;
+                     << "this argument is supposed to be between 1 and 10000!" << endl;
                 return false;
             }
         }
@@ -112,8 +112,22 @@ bool set_arguments(int argc, char** argv) {
         if(arguments[i] == "-r") {
             if(is_set[4]) return false;
             is_set[4] = true;
-
-
+            i += 1;
+            // not digit
+            if(!is_digit(arguments[i])) {
+                cout << "error at -r " << arguments[i] << endl
+                     << "this argument is supposed to be an integer!" << endl;
+                return false;
+            }
+            stringstream ss;
+            ss << arguments[i];
+            ss >> blanks;
+            // out of range
+            if(blanks < 20 || blanks > 55) {
+                cout << "error at -r " << arguments[i] << endl
+                     << "this argument is supposed to be between 20 and 55!" << endl;
+                return false;
+            }
         }
 
         if(arguments[i] == "-u") {
