@@ -34,6 +34,6 @@ int main(int argc, char** argv) {
         return -1;
     }
 
-    cout << path << endl;
+    cout << number << endl;
     return 0;
 }

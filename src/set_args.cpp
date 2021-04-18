@@ -37,7 +37,7 @@ bool set_arguments(int argc, char** argv) {
             i += 1;
             // not digit
             if(!is_digit(arguments[i])) {
-                cout << "error at -m " << arguments[i] << endl
+                cout << "error at -c " << arguments[i] << endl
                      << "this argument is supposed to be an integer!" << endl;
                 return false;
             }
@@ -46,11 +46,10 @@ bool set_arguments(int argc, char** argv) {
             ss >> count;
             // out of range
             if(count < 0 || count > 10000000) {
-                cout << "error at -m " << arguments[i] << endl
+                cout << "error at -c " << arguments[i] << endl
                      << "this argument is supposed to be between 1 and 10000000!" << endl;
                 return false;
             }
-
         }
 
         if(arguments[i] == "-s") {
@@ -71,8 +70,22 @@ bool set_arguments(int argc, char** argv) {
         if(arguments[i] == "-n") {
             if(is_set[2]) return false;
             is_set[2] = true;
-
-
+            i += 1;
+            // not digit
+            if(!is_digit(arguments[i])) {
+                cout << "error at -n " << arguments[i] << endl
+                     << "this argument is supposed to be an integer!" << endl;
+                return false;
+            }
+            stringstream ss;
+            ss << arguments[i];
+            ss >> number;
+            // out of range
+            if(number < 0 || number > 10000) {
+                cout << "error at -n " << arguments[i] << endl
+                     << "this argument is supposed to be between 1 and 10000000!" << endl;
+                return false;
+            }
         }
 
         if(arguments[i] == "-m") {
