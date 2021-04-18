@@ -19,6 +19,8 @@ iostream
 -
 sstream
 -
+fstream
+-
 ../include/arguments.h
 D:/NKU/SoftwareEngineering/Sudoku/include/arguments.h
 

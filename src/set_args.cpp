@@ -1,5 +1,6 @@
 #include <iostream>
 #include <sstream>
+#include <fstream>
 #include "../include/arguments.h"
 
 using namespace std;
@@ -15,7 +16,7 @@ bool is_set[6]; // return false if exists redundant argument
 
 bool is_digit(string str) {
     for (int i = 0;i < str.size();i++) {
-        if (str.at(i) == '-' && str.size() > 1)  // 有可能出现负数
+        if (str.at(0) == '-' && str.size() > 1)  // 有可能出现负数
             continue;
         if (str.at(i) > '9' || str.at(i) < '0')
             return false;
@@ -34,6 +35,7 @@ bool set_arguments(int argc, char** argv) {
             if(is_set[0]) return false;
             is_set[0] = true;
             i += 1;
+            // not digit
             if(!is_digit(arguments[i])) {
                 cout << "error at -m " << arguments[i] << endl
                      << "this argument is supposed to be an integer!" << endl;
@@ -42,6 +44,7 @@ bool set_arguments(int argc, char** argv) {
             stringstream ss;
             ss << arguments[i];
             ss >> count;
+            // out of range
             if(count < 0 || count > 10000000) {
                 cout << "error at -m " << arguments[i] << endl
                      << "this argument is supposed to be between 1 and 10000000!" << endl;
@@ -53,8 +56,16 @@ bool set_arguments(int argc, char** argv) {
         if(arguments[i] == "-s") {
             if(is_set[1]) return false;
             is_set[1] = true;
-
-
+            i += 1;
+            path = arguments[i];
+            ifstream fs(path);
+            // file does not exist
+            if(!fs.is_open()) {
+                cout << "error at -s " << arguments[i] << endl;
+                cout << "could not open file!" << endl;
+                return false;
+            }
+            fs.close();
         }
 
         if(arguments[i] == "-n") {
