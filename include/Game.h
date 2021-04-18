@@ -10,6 +10,7 @@ public:
     Game();
     bool solve();
     bool check();
+    bool dfs(int x);
     void generate();
     void generate_unique();
 };

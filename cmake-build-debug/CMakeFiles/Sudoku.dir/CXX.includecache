@@ -7,12 +7,16 @@
 #IncludeRegexTransform: 
 
 D:/NKU/SoftwareEngineering/Sudoku/include/Game.h
+vector
+-
 
-D:/NKU/SoftwareEngineering/Sudoku/src/Game.cpp
-../include/Game.h
-D:/NKU/SoftwareEngineering/Sudoku/include/Game.h
+D:/NKU/SoftwareEngineering/Sudoku/src/solve_sudokus.cpp
 iostream
 -
-cstring
+fstream
 -
+stdio.h
+-
+../include/Game.h
+D:/NKU/SoftwareEngineering/Sudoku/include/Game.h
 

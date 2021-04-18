@@ -18,9 +18,11 @@ bool solve_sudokus() {
     freopen(path.c_str(), "r", stdin);
     cin >> n;
     if(n < 0) return false;
-    for(int i = 0;i < n;i++) {
+    for(int i = 1;i <= n;i++) {
         Game g;
+        cout << "Game # " << i << ":" << endl;
         if(!g.solve()) return false;
+        cout << endl << endl;
     }
     cout << "solved successfully" << endl;
     return true;
